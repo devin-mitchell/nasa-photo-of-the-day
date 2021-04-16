@@ -13,6 +13,8 @@ const Explanation = styled.p`
 color: ${pr => pr.theme.white};
 background-color: ${pr => pr.theme.primaryColor};
 font-size: 1.1rem;
+padding: 5%;
+margin: 5%;
 `
 
 export default function Photo({ photoData }) {
