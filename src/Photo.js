@@ -1,18 +1,30 @@
 import React from 'react';
+import styled from 'styled-components'
 
 
+const Title = styled.h2`
+  color: ${pr => pr.theme.black};
+  font-family: ${pr => pr.theme.fontOne};
+  font-size: 2rem;
+  padding: 1%;
+  margin: 0;
+`
+const Explanation = styled.p`
+color: ${pr => pr.theme.white};
+background-color: ${pr => pr.theme.primaryColor};
+font-size: 1.1rem;
+`
 
-export default function Photo(props) {
-    const { photoData } = props;
-
+export default function Photo({ photoData }) {
+   
 
 if (!photoData) return <h3>Loading...</h3>; 
 
     return(
         <>
-            <h2>{photoData.title}</h2>
+            <Title>{photoData.title}</Title>
             <img src={photoData.url} />
-            <p>{photoData.explanation}</p>
+            <Explanation>{photoData.explanation}</Explanation>
         </>
     );
 };
